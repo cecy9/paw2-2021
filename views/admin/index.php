@@ -16,6 +16,7 @@
     <title>Administrador</title>
 </head>
 <body>
+<?php include 'navbar/navbar.php'; ?>
     <h3><b>Bienvenido/a: <?php echo $user; ?> </b></h3>
 </body>
 </html>
