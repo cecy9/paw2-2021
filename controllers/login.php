@@ -1,7 +1,5 @@
 <?php
-
     session_start();
-   
     include '../models/conexion.php';
     include '../models/login.php';
     include 'procesos.php';
@@ -10,12 +8,11 @@
     {
         $user = $_POST['user'];
         $passw = $_POST['passw'];
-        
-        AccesoLogin($user, $passw);
+
+        AccesoLogin($user,$passw);
     }
     else
     {
         header("Location: ../index.php");
     }
-
 ?>
