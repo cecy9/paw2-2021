@@ -71,7 +71,7 @@
                             </div>
                         <?php endif ?>
                         <form action="./controllers/login.php" method="POST" class="border p-3 formlogin">
-                            <div style="margin-bottom: 10px;color:while;text-align:center">
+                            <div style="margin-bottom: 10px;color:white;text-align:center">
                                 <b>Iniciar Sesión</b>
                             </div>
                             <div class="input-group mb-3">
@@ -94,6 +94,11 @@
                                 <button class="btn btn-success btn-sm" name="acclogin">Ingresar</button>
                             </div>
                         </form>
+                        <div style="margin-top: 20px;">
+                            <form action="./controllers/login.php" method="POST">
+                                <button class="btn btn-danger" name="olvide">Olvide Contraseña</button>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -101,4 +106,40 @@
     </div>
     
 </body>
+
+
+
+<form id="UpdProvee">
+    <input type="hidden" name="id_proveedor" value="<?php echo $id_proveedor; ?>">
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">Proveedor: </span>
+        </div>
+        <input type="text" name="nombre_proveedor" class="form-control" value="<?php echo $nombre_proveedor; ?>" required="ON">
+    </div>
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">Dirección: </span>
+        </div>
+        <input type="text" name="direccion" class="form-control" value="<?php echo $direccion; ?>" required="ON">
+    </div>
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">Teléfono: </span>
+        </div>
+        <input type="text" name="telefono" class="form-control" value="<?php echo $telefono; ?>" required="ON">
+    </div>
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">Correo: </span>
+        </div>
+        <input type="text" name="correo" class="form-control" value="<?php echo $correo; ?>" required="ON">
+    </div>
+    <button class="btn btn-success">Actualizar</button>
+</form>
+
+
+
+
+
 </html>
