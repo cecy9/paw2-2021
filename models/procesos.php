@@ -41,6 +41,23 @@
             $num_rows = $stm->rowCount();
             return $num_rows;
         }
+
+        //Buscar valor de x tabla.
+        public function BuscaValor($tabla, $campo, $condicion)
+        {
+            $rows = NULL;
+            $modelo = new ConexionBD();
+            $conexion = $modelo->get_conexion();
+            $sql = "SELECT $campo FROM $tabla WHERE $condicion";
+            $stm = $conexion->prepare($sql);
+            $stm->execute();
+
+            while($result = $stm->fetch())
+            {
+                $rows[] = $result;
+            }
+            return $rows;
+        }
         
     }
 ?>

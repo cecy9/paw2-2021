@@ -1,4 +1,5 @@
 <?php
+
     class login
     {
         public function GetDataUser($user)
@@ -11,7 +12,7 @@
             $stm->bindParam(':usuario',$user);
             $stm->execute();
 
-            while ($result = $stm->fetch())
+            while($result = $stm->fetch())
             {
                 $row[] = $result;
             }
@@ -19,4 +20,8 @@
             return $row;
         }
     }
+
+
+
+
 ?>
